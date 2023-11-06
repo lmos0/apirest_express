@@ -13,5 +13,12 @@ app.listen(port, () =>{
 })
 
 app.get('/', (req,res) => {
-    res.render('index')
+    const articles = [{
+        title: 'teste',
+        createdAt: new Date(),
+        description: 'teste descrito'
+
+    }]
+    
+    res.render('index', {articles : articles})
 })
